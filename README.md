@@ -14,7 +14,7 @@ Closed is a minimal Tumblr theme design.
 
 ## How to use
 
-Copy the ['closed.html'](https://github.com/CoSnap/Boundless-Tumblr-Theme/master/boundless.html) source into the custom html box under 'Customise appearance' within Tumblr.
+Copy the ['closed.html'](hhttps://github.com/samstefan/Closed-Tumblr-Theme/blob/master/Closed.html) source into the custom html box under 'Customise appearance' within Tumblr.
 
 ## Licence
 
