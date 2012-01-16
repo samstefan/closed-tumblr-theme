@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+	<!--
+	Clear Tumblr Theme - 1.0
+	Designd by CoSnap.
+	cosnap.co.uk
+	-->
+
+	<title>{Title}</title>
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="{Favicon}" />
+	
+	<!-- RSS -->
+	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
+	
+	<!-- Meta Tags -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	{block:Description}<meta name="description" content="{MetaDescription}"/>{/block:Description}
+				
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ubkenek/3sQlmxy8v/reset-min.css" />
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="http://static.tumblr.com/gpln05e/ao8kyw205/jquery-1.4.2.min.js"></script>
+
+	<style type="text/css">
+
+	/*========================================================
+		Basics Page Setup                                                                                 
+	========================================================*/		
+		
+	html, body {
+		background: #f0efec;
+		height: 100%;
+		color: #434343;
+		font-family: Helvetica, Arial, Sans-Serif;
+		font-size: 14px;
+		line-height: 1.5; }	
+		
+	.Wrapper {
+		width: 960px;
+		height: 100%;
+		min-height: 100%;
+		float: left;
+		clear: both; }
+	
+	p, .Source { margin: 0 0 10px 0; }
+
+	.Clearfix:after { 
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0; }
+	
+	.Clearfix { display: inline-block; }
+	html[xmlns] .Clearfix { display: block; }
+	* html .Clearfix { height: 1%; }
+	
+	a:link, a:visited, a { text-decoration: none; color: #363636; padding-bottom: 2px; border-bottom: 1px solid #c2c2c2;}
+	a:hover { border-bottom: 1px solid #363636; }
+	
+	::selection { background: #aff2d8;}
+	::-moz-selection { background: #aff2d8; }
+	
+	h1 { font-size: 55px; font-weight: bold; }
+	h2 { font-size: 30px; font-weight: bold; margin: 0 0 10px 0; }
+	
+	h2 a, h2 a:link, h2 a:visited { padding: 0; border-bottom: none; }
+	h2 a:hover { border-bottom: none; color: #8b8b8b; }
+		
+	.Post ul { margin-bottom: 5px; }
+	.Post li { list-style: disc; padding-left: 10px; margin: 0 0 5px 18px; }
+	
+	.Posts b, .Posts strong {font-weight: bold;}
+	.Posts em, .Posts i {font-style: italic;} 
+	
+	.Posts blockquote p { margin: 0; }
+	.Posts blockquote { 
+		border-left: 1px solid #434343;
+		margin: 0 0 10px 0;
+		padding-left: 20px; }
+
+	/*========================================================
+		Body
+	========================================================*/
+	
+	.PostsWrapper {
+		width: 730px;
+		min-height: 100%;
+		float: left;
+		clear: none;
+		display: block;
+		border-left: 2px solid #e9e8e6; }
+	
+	.Posts {
+		width: 660px;
+		height: 100%;
+		float: left;
+		clear: none;
+		background: #f5f5f5; }
+
+	.Posts p, .Posts ul, .Posts blockquote, .Source { float: left; clear: both; font-family: Georgia, "Times New Roman", Serif; }
+	
+	.Posts p { width: 100%; }
+		
+	.Post {
+		width: 620px;
+		float: left;
+		clear: both;
+		padding: 48px 20px 10px 20px;
+		background: #f5f5f5; }
+		
+	.PostFooter {
+		width: 640px;
+		float: left;
+		clear: both;
+		margin: 0 0 40px 0;
+		padding: 10px 0 10px 20px;
+		background: #f5f5f5;
+		border-top: 1px solid #f0efec;
+		border-bottom: 1px solid #f0efec;
+		color: #b1b5b9;
+		font-size: 11px; }
+		
+	.PostFooter a { margin: 0 20px 0 0; }
+	
+	.Permalink:link {
+		float: right;
+		clear: none;
+		height: 35px;
+		width: 40px;
+		margin: -10px -40px -10px 0;
+		border-bottom: none;
+		background: url(http://static.tumblr.com/ubkenek/6zAlxsv0z/permalink.png) #c2c2c2 no-repeat 9px 9px; }
+		
+	.Permalink:hover { border-bottom: none; background-color: #363636; } 	
+		
+	.Date {
+		float: left;
+		clear: both;
+		font-size: 12px;
+		font-weight: bold;
+		margin: 0 0 10px 0;
+		padding: 0;
+		border-bottom: none; }
+		
+	.Date:link, .Date:visited { padding: 0;	border-bottom: none; }	
+	.Date:hover { border-bottom: none; color: #8b8b8b; }
+	
+	.PhotoWrapper {
+		width: 660px;
+		background: #f0efec;
+		margin: -50px -20px 20px -20px; }
+	
+	.PhotoWrapper img { margin: 0 0 -5px 0; }
+	.PhotoWrapper a { border-bottom: none; }
+	.HighResPhoto, .HighResPhotoset { max-width: 660px; }
+	
+	.Chat { width: 620px; }
+	.Chat li.odd, .Chat li.even { margin: 0; padding: 5px 0; border-top: 1px solid #ececec; list-style: none; }
+	.Chat li.odd:first-of-type { border-top: none;}
+	.Chat .Label { font-style: italic; }
+	.Chat li.even .Label { color: #b6b9bd; }
+	
+	.VideoPost object, .VideoPost embed, .VideoPost iframe {
+		width: 660px !important;
+		max-width: 780px;
+		height: 373px;
+		margin: 0 -20px 20px -20px; }	
+			
+	.AudioInfo {
+		float: left;
+		clear: none;
+		width: 380px;
+		margin: 0 0 0 20px; }	
+		
+	.AlbumArtHolder {
+		width: 220px;
+		height: 220px;
+		float: left;
+		clear: left;
+		margin: 0 0 10px 0;
+		background: url(http://static.tumblr.com/ubkenek/9oCltxte3/albumart-bg.png) no-repeat; }
+		
+	.AlbumArt { max-width: 220px; }
+	
+	.PlayCount {
+		float: left;
+		clear: both;
+		font-size: 12px;
+		color: #5f5f5f; }
+		
+	.AudioCaption {
+		float: left;
+		margin: 10px 0 0 0;
+		display: block; }
+
+	.Question, .Answer { width: 100%; font-family: Georgia, "Times New Roman", Serif; }
+	
+	.Question { float: left; clear: both; padding: 0 0 10px 0; margin: 0 0 10px 0; border-bottom: 1px solid #f0efec; }
+	.QuestionHighlight { float: left; clear: both; width: 100%; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: #363636; }
+	
+	/*========================================================
+		SideBar
+	========================================================*/
+	
+	.SideBarWrapper {
+		width: 228px;
+		float: left;
+		clear: none;
+		display: block;
+		background: #aff2d8; }	
+		
+	.SideBarBackground {
+		width: 230px;
+		height: 160px; 
+		clear: both;
+		background: url(http://static.tumblr.com/ubkenek/xb6lxr8nq/sidebar-bg.png) top no-repeat; }		
+		
+	.SideBar {
+		width: 190px;
+		height: 100%;
+		float: left;
+		padding: 0 20px;
+		top: 160px;
+		background: #f0efec; }
+		
+	.BlogTitle {
+		width: 190px;
+		float: left;
+		clear: both;
+		margin: -130px 0 0 0;
+		text-shadow: 0 -1px 1px rgba(255,255,255,0.01);
+		-webkit-font-smoothing: antialiased; }
+		
+	.BlogTitle a { border-bottom: none; }
+	.BlogTitle a:hover { border-bottom: none; color: #5f5f5f; }
+		
+	.BlogDescription {
+		float: left;
+		clear: both;
+		font-size: 12px;
+		color: #5f5f5f; }
+		
+	ul.Navagation {
+		float: left;
+		clear: both;
+		margin: 40px 0 0 0;
+		border-top: 1px solid #c2c2c2;
+		font-size: 14px;
+		font-weight: bold; }
+		
+	.Navagation li {
+		width: 190px; 
+		float: left;
+		clear: both;
+		border-bottom: 1px solid #c2c2c2;
+		padding: 5px 0; }
+	
+	.Navagation a:link, .Navagation a:visited, .Navagation a { border-bottom: none; padding: 2px 0 0 15px; margin: 0 0 0 5px; }
+	.Navagation a:hover { color: #8b8b8b; }
+	
+	.Navagation .Home { background: url(http://static.tumblr.com/ubkenek/Ve8lxtdt0/homeicon.png) no-repeat left; }
+	.Navagation .Archive { background: url(http://static.tumblr.com/ubkenek/Dq7lxte4s/archiveicon.png) no-repeat left; }
+	.Navagation .RSSFeed { background: url(http://static.tumblr.com/ubkenek/1Dblxte6z/rssfeedicon.png) no-repeat left; }
+	.Navagation .BackToTop { background: url(http://static.tumblr.com/ubkenek/DLtlxted7/backtotopicon.png) no-repeat left; }
+	.Navagation .Ask { background: url(http://static.tumblr.com/ubkenek/Iavlxtett/askquestionicon.png) no-repeat left; }
+	.Navagation .Submit { background: url(http://static.tumblr.com/ubkenek/GNjlxui78/submit.png) no-repeat left; }
+	.Navagation .Page { background: url(http://static.tumblr.com/ubkenek/fmMlxuip6/pageicon.png) no-repeat left; }
+
+	/*========================================================
+		Notes
+	========================================================*/
+			
+	.NotesCount:link, .NotesCount:visited, .RebloggedFrom:link,
+	.RebloggedFrom:visited {
+		float: left;
+		clear: none;
+		color: #b1b5b9;
+		border-bottom: none;
+		padding: 2px 0 0 20px;
+		background: url(http://static.tumblr.com/ubkenek/cFtlxskdf/notes.png) no-repeat left; }
+
+	.NotesCount { margin: 0 0 5px 0; }
+		
+	.Tags a, .Tags a:link, .Tags a:visited { border-bottom: none; padding: 0; color: #b1b5b9; }
+
+	ul.Tags {
+		float: left;
+		clear: none;
+		padding: 1px 0 0 20px;
+		background: url(http://static.tumblr.com/ubkenek/9C9lxsnil/tag.png) no-repeat left; }	
+		
+	.Tags li { width: auto; height: auto; float: left; clear: none; margin: 0 10px 0 0; }	
+	
+	ul.Tags a, ul.Tags a:link, ul.Tags a:visited { font-family: Arial, Helvetica, sans-serif; clear: none; background: none; margin: 0 0 0 0; }	
+	
+	.NotesCount:hover, .RebloggedFrom:hover, .Tags a:hover { color: #363636; }
+	
+	.RebloggedFrom:link { background: url(http://static.tumblr.com/ubkenek/ZXqlxsmbi/rebloged.png) no-repeat left; }
+	
+	.notes {
+		width: 660px;
+		float: left;
+		clear: both;
+		margin: -40px 0 0 0;
+		color: #5f5f5f; }
+		
+	.note { font-size: 12px; width: 620px; float: left; clear: both; }
+	ol.notes li.note { padding: 10px 20px 10px 20px; border-bottom: 1px solid #f0efec; }
+	ol.notes li.note img.avatar { display: none; }
+	ol.notes li.note blockquote { border-color: #eee; padding: 4px 10px; margin: 10px 0px 0px 25px; }
+
+	
+	/*========================================================
+		Footer
+	========================================================*/
+	
+	.Block { 
+		width: 660px;
+	 	background: #f5f5f5;
+	 	float: left;
+	 	clear: both;
+	 	margin: 0 0 -10px 0; }
+	
+	/*========================================================
+		Pagination
+	========================================================*/
+		
+	.Pagination {
+		width: 660px;
+		float: left;
+		clear: both;
+		margin: 0 0 -10px 0;
+		font-weight: bold; }
+		
+	.Pagination a { border-bottom: none; }
+		
+	.Pagination .Next {
+		width: 290px;
+		float: right;
+		clear: none;
+		padding: 10px 20px;
+		background: #2f2f2f;
+		color: #f5f5f5;
+		text-align: right; }
+		
+	.Pagination .Next:hover { color: #2f2f2f; background: #f5f5f5; }	
+			
+	.Pagination .Back {
+		width: 290px;
+		float: left;
+		clear: none;
+		padding: 10px 20px;
+		background: #f5f5f5;
+		text-align: left; }	
+		
+	.Pagination .Back:hover { color: #f5f5f5; background: #2f2f2f; }
+		
+	/*========================================================
+		Disqus
+	========================================================*/
+
+	
+
+	/*========================================================
+		Custom CSS
+	========================================================*/					
+			
+	{CustomCSS}
+				
+	</style>
+	<!-- End of CSS -->
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+		
+			var DocHight = $(document).height();
+			var PostHight = $('.Post').height() + $('.PostFooter').outerHeight() + $('.notes').outerHeight();
+		
+			$('div.Block').css('height', DocHight - PostHight );
+		
+			//	Scrolls the page back to the top.	
+			$('a.BackToTop').click(function(event) {
+				$('html, body').animate( {scrollTop:(0)},'slow');
+				return false;
+			});
+			
+			// Removes photo post border if photo post is the first post shown
+			$('div.Posts').first(function() { 
+				if ( $('div.Posts').first().hasClass(Test) ) {
+					$('.PhotoWrapper').css('margin-top','-50px');
+				}
+			});
+		
+			// Removes low-res photo if high-res photo is available for photo posts
+			jQuery.fn.exists = function(){return jQuery(this).length>0;}
+			
+			$('.PhotoWrapper').each(function(index) { 
+				if ($('.HighResPhoto, .HighResPhotoset', this).exists()) {
+    				$('.LowResPhoto, .LowResPhotoset', this).css('display','none');
+				}
+			});
+						
+			//Scrolling Sidebar
+			$(window).scroll(function() {
+        		if ( $(window).scrollTop() > 2 ) {
+					$('.SideBarBackground').stop().animate({ marginTop: $(window).scrollTop() },250);	
+
+				} else {
+				   $('.SideBarBackground').stop().animate({ marginTop: 0 });
+				}
+
+			});
+			
+		});
+	</script>
+			
+</head><!-- End Head -->
+
+<body>
+		
+	<div class="Wrapper">
+		
+		<div class="SideBarWrapper">
+		
+			<div class="SideBarBackground"></div>
+			
+			<div class="SideBar">
+			
+				<h1 class="BlogTitle"><a href="/" title="{Title}">{Title}</a></h1>
+
+				{block:Description}<p class="BlogDescription">{Description}</p>{/block:Description}
+			
+				<ul class="Navagation">
+					<li><a class="Home" href="/" title="Home">Home</a></li>
+					<li><a class="Archive" href="/archive" title="Archive">Archive</a></li>
+					<li><a class="RSSFeed" href="{RSS}" title="RSS Feed">RSS Feed</a></li>
+					{block:SubmissionsEnabled}<li><a class="Submit" href="/submit" title="{SubmitLabel}">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
+					{block:AskEnabled}<li><a class="Ask" href="/ask" title="{AskLabel}">{AskLabel}</a></li>{/block:AskEnabled}
+					{block:HasPages}{block:Pages}<li><a class="Page" href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+					<li><a class="BackToTop" href="#" title="Back to the top">Back To Top</a></li>
+				</ul><!-- End Navagation -->
+				
+			</div><!-- End Sidebar -->
+			
+		</div><!-- End Sidebar Wrapper-->
+		
+		<div class="Clearfix PostsWrapper">
+			
+			<div class="Posts">
+			{block:Posts}
+			
+				{block:Answer}
+				<div class="Post AnswerPost">
+					<h2>{Asker} Asked</h2>
+					<span class="Question"><span class="QuestionHighlight">Question</span>{Question}</span>
+					<span class="Answer"><span class="QuestionHighlight">Answer</span>{Answer}</span>
+				</div><!-- End Answer Post -->
+				{/block:Answer}
+			
+				{block:Text}
+				<div class="Post TextPost">
+					{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+					{block:Date}
+					<a class="Date" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/" title="{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}">
+						{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
+					</a><!-- End Date Block -->
+					{/block:Date}
+					{Body}
+				</div><!-- End Text Post -->
+				{/block:Text}
+				
+				{block:Photo}
+				<div class="Post PhotoPost">
+					<div class="PhotoWrapper">
+						{LinkOpenTag}
+							<img class="LowResPhoto" src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+							{block:HighRes}<img class="HighResPhoto" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{/block:HighRes}
+						{LinkCloseTag}	
+					</div><!-- End Photo Wrapper -->
+					{block:Date}
+					<a class="Date" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/" title="{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}">
+						{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
+					</a><!-- End Date Block -->
+					{/block:Date}
+					{block:Caption}{Caption}{/block:Caption}
+				</div><!-- End Photo Post -->
+				{/block:Photo}
+			
+				{block:Photoset}
+				<div class="Post PhotoSetPost">
+					<div class="PhotoWrapper">
+						<div class="LowResPhotoset">{Photoset-500}</div>
+						{block:Photos}{block:HighRes}
+						<a alt="{PhotoAlt}" href="{PhotoURL-HighRes}">
+							<img class="HighResPhotoset" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+						</a>
+						{/block:HighRes}{/block:Photos}
+					</div><!-- End Photo Wrapper -->
+					{block:Date}
+					<a class="Date" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/" title="{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}">
+						{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
+					</a><!-- End Date Block -->
+					{/block:Date}
+					{block:Caption}{Caption}{/block:Caption}
+				</div><!-- End Photoset Post -->
+				{/block:Photoset}
+				
+				{block:Quote}
+				<div class="Post QuotePost">
+					<h2>"{Quote}"</h2>
+					{block:Date}
+					<a class="Date" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/" title="{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}">
+						{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
+					</a><!-- End Date Block -->
+					{/block:Date}
+					{block:Source}<div class="Source">&#8212; {Source}</div>{/block:Source}		
+				</div><!-- End Quote Post -->
+				{/block:Quote}
+			
+				{block:Link}
+				<div class="Post LinkPost">
+					<h2><a href="{URL}" class="link" {Target}>{Name}</a></h2>
+					{block:Date}
+					<a class="Date" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/" title="{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}">
+						{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
+					</a><!-- End Date Block -->
+					{/block:Date}
+					{block:Description}{Description}{/block:Description}
+				</div><!-- End Link Post -->
+				{/block:Link}
+				
+				{block:Chat}
+				<div class="Post ChatPost">
+					{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+					{block:Date}
+					<a class="Date" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/" title="{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}">
+						{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
+					</a><!-- End Date Block -->
+					{/block:Date}
+					<ul class="Chat">
+					{block:Lines}
+						<li class="{Alt} user_{UserNumber}">
+							{block:Label}<span class="Label">{Label}</span>{/block:Label}
+							{Line}
+						</li>
+					{/block:Lines}
+					</ul>
+				</div><!-- End Chat Post -->
+				{/block:Chat}
+			
+				{block:Video}
+				<div class="Post VideoPost">
+					<div class="Video">{Video-500}</div>
+					{block:Date}
+					<a class="Date" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/" title="{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}">
+						{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
+					</a><!-- End Date Block -->
+					{/block:Date}
+					{block:Caption}{Caption}{/block:Caption}
+				</div><!-- End Video Post -->
+				{/block:Video}
+			
+				{block:Audio}
+				<div class="Post AudioPost">
+					{block:Artist}
+					<h2><a href="{Permalink}" title="{Artist} &#8211; {block:TrackName}{TrackName}{/block:TrackName}">{Artist} {block:TrackName}&#8211; {TrackName}{/block:TrackName}</a></h2>
+					{/block:Artist}
+					{block:Date}
+					<a class="Date" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/" title="{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}">
+						{DayOfWeek} {DayOfMonth}{DayOfMonthSuffix} {Month} {Year}
+					</a><!-- End Date Block -->
+					{/block:Date}
+					<div class="AlbumArtHolder">
+						{block:AlbumArt}<img class="AlbumArt" src="{AlbumArtURL}" alt="Album Art"/>{/block:AlbumArt}
+					</div><!-- End AlbumArt Wrapper -->
+					<div class="AudioInfo">
+						{AudioPlayerWhite}
+						<span class="AudioCaption">{block:Caption}{Caption}{/block:Caption}</span>
+						<span class="PlayCount">Played {PlayCount} times.</span>
+					</div><!-- End Audio Info / Player -->
+				</div><!-- End Video Post -->
+				{/block:Audio}
+			
+				<div class="PostFooter">
+					{block:NoteCount}<a class="NotesCount" href="{Permalink}" title="Note Count">{NoteCountWithLabel}</a>{/block:NoteCount}
+					{block:RebloggedFrom}<a class="RebloggedFrom" href="{ReblogParentURL}" title="Reblogged from {ReblogParentTitle}">Reblogged from {ReblogParentTitle}</a>{/block:RebloggedFrom}
+					{block:HasTags}
+                    <ul class="Tags">{block:Tags}<li><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul>
+               		{/block:HasTags}
+               		{block:IndexPage}<a class="Permalink" href="{Permalink}" title="Permalink"></a>{/block:IndexPage}
+               </div><!-- End Post Footer -->
+				
+				{block:PostNotes}{PostNotes}{/block:PostNotes}
+				
+				{block:PermalinkPage}<div class="Block"></div>{/block:PermalinkPage}
+			
+			{/block:Posts}
+			</div><!-- End Posts -->
+			
+			<div class="Pagination">
+
+				{block:NextPage}<a class="Next" href="{NextPage}" title="Go to the next page">Next &#8594;</a>{/block:NextPage}
+				{block:PreviousPage}<a class="Back" href="{PreviousPage}" title="Go to the previous page">&#8592; Back</a>{/block:PreviousPage}
+			
+			</div><!-- End Pagination -->
+			
+		</div><!-- End Posts Wrapper -->
+		
+		
+	</div><!-- End Wrapper -->
+
+</body>
+</html>
