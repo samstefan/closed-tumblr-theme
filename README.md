@@ -22,4 +22,4 @@ Closed may be used by anyone for any purpose, in both a personal and commercial 
 
 ## Credits
 
-Closed was created by the [CoSnap](http://cosnap.co.uk).
+Closed was created by [CoSnap](http://cosnap.co.uk).
