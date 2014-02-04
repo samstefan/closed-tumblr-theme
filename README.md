@@ -1,20 +1,20 @@
-# Closed Tumblr Theme v2.1
+# Closed Tumblr Theme
 
 [Demo](http://closed.cosnap.co.uk)
 
 ## What is 'Closed'
+---
 
 Closed is a minimal Tumblr theme design. 
-
-## Updates
-
-### 1.0
-
- * Initial commit.
 
 ## How to use
 
 Copy the ['closed.html'](hhttps://github.com/samstefan/Closed-Tumblr-Theme/blob/master/Closed.html) source into the custom html box under 'Customise appearance' within Tumblr.
+
+## Release History
+---
+
+* 0.2.0 All post types added.
 
 ## Licence
 
